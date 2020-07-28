@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musicmatch_lyrics/BLOCs/tracksBloc.dart';
 
 ThemeData themeData = ThemeData(
     primarySwatch: Colors.grey,
@@ -12,3 +13,7 @@ ThemeData themeData = ThemeData(
 
 //mine
 String apiKey = '1001843012a848e526c3bc579d1aff8c';
+
+//bloc objects
+
+TracksBloc tracksBloc;

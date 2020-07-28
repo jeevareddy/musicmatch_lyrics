@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:connectivity/connectivity.dart';
+import 'package:musicmatch_lyrics/constants.dart';
 
 class NetworkService extends ChangeNotifier {
   NetworkService() {
@@ -11,8 +12,8 @@ class NetworkService extends ChangeNotifier {
 
   void updateStatus(bool val) {
     available = val;
+    tracksBloc.tracksController.add([]);
     notifyListeners();
-    // if (val) TracksBloc().getTracks();
   }
 
   checkConnectivity(ConnectivityResult result) async {
